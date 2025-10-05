@@ -1,17 +1,1 @@
-FROM eclipse-temurin:17-jdk
-
-WORKDIR /app
-
-COPY pom.xml ./
-COPY src ./src
-
-RUN ./mvnw -v || true
-RUN apt-get update && apt-get install -y maven
-
-RUN mvn -q -e -DskipTests=true clean package
-
-EXPOSE 8080
-ENV PORT=8080
-
-CMD [ java, -jar, target/product-api-1.0.0.jar]
-
+FROM maven:3.9-eclipse-temurin-17 AS build\nWORKDIR /app\nCOPY pom.xml ./\nCOPY src ./src\nRUN mvn -DskipTests=true clean package\n\nFROM eclipse-temurin:17-jre\nWORKDIR /app\nCOPY --from=build /app/target/product-api-1.0.0.jar /app/app.jar\nEXPOSE 8080\nENV JAVA_OPTS=\nENTRYPOINT [ sh,-c,java  -jar /app/app.jar]\n

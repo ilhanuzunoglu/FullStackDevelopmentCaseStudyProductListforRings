@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaseStudy - Product Listing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Avenir:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="page-title">Product List</h1>
+        </header>
+
+        <main class="main-content">
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-btn-left" id="prevBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <div class="carousel" id="carousel">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Products will be loaded here -->
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-right" id="nextBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading products...</p>
+            </div>
+
+            <div class="error" id="error" style="display: none;">
+                <p>Error loading products. Please try again.</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="design-info">
+                <div class="font-info">
+                    <p>Avenir - Book - 14</p>
+                    <p>Avenir - Book - 12</p>
+                    <p>Montserrat - Regular - 15</p>
+                    <p>Montserrat - Medium - 15</p>
+                </div>
+                <div class="color-palette">
+                    <div class="color-item">
+                        <div class="color-circle" style="background-color: #E6CA97;"></div>
+                        <span>Yellow Gold (#E6CA97)</span>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-circle" style="background-color: #D9D9D9;"></div>
+                        <span>White Gold (#D9D9D9)</span>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-circle" style="background-color: #E1A4A9;"></div>
+                        <span>Rose Gold (#E1A4A9)</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

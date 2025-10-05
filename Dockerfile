@@ -1,1 +1,12 @@
-FROM maven:3.9-eclipse-temurin-17 AS build\nWORKDIR /app\nCOPY pom.xml ./\nCOPY src ./src\nRUN mvn -DskipTests=true clean package\n\nFROM eclipse-temurin:17-jre\nWORKDIR /app\nCOPY --from=build /app/target/product-api-1.0.0.jar /app/app.jar\nEXPOSE 8080\nENV JAVA_OPTS=\nENTRYPOINT [ sh,-c,java  -jar /app/app.jar]\n
+FROM maven:3.9-eclipse-temurin-17 AS build
+WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+RUN mvn -DskipTests=true clean package
+
+FROM eclipse-temurin:17-jre
+WORKDIR /app
+COPY --from=build /app/target/product-api-1.0.0.jar /app/app.jar
+EXPOSE 8080
+ENV JAVA_OPTS=
+ENTRYPOINT [ sh,-c,java  -jar /app/app.jar]

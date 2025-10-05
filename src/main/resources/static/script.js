@@ -12,7 +12,8 @@ const error = document.getElementById('error');
 
 // API Configuration
 const API_BASE_URL = 'https://fullstackdevelopmentcasestudyproductlist.onrender.com';
-const response = await fetch(`${API_BASE_URL}/products`);
+const response = await fetch(`${API_BASE_URL}/api/products`);
+
 
 
 // Initialize the application

@@ -13,7 +13,7 @@ const error = document.getElementById('error');
 // API Configuration
 const API_BASE_URL = 'https://fullstackdevelopmentcasestudyproductlist.onrender.com';
 const response = await fetch(`${API_BASE_URL}/api/products`);
-const products = await response.json();
+
 
 
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function loadProducts() {
     try {
         showLoading(true);
-        const response = await fetch(`${API_BASE_URL}/products`);
+        const response = await fetch(`${API_BASE_URL}/api/products`);
         
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);

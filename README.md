@@ -2,6 +2,9 @@
 
 Modern ve responsive bir ürün listeleme uygulaması. Backend Spring Boot API ve Frontend HTML/CSS/JavaScript ile geliştirilmiştir.
 
+<img width="1920" height="797" alt="image" src="https://github.com/user-attachments/assets/30294d52-e48e-46d4-bd08-e453cb5d2c7d" />
+
+
 ## 🚀 Özellikler
 
 ### Backend (Spring Boot)
@@ -192,13 +195,6 @@ CaseStudy/
 - **API**: Reactive programming (WebFlux)
 - **Caching**: H2 in-memory database
 
-## 🤝 Katkıda Bulunma
-
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/AmazingFeature`)
-3. Commit yapın (`git commit -m 'Add some AmazingFeature'`)
-4. Push yapın (`git push origin feature/AmazingFeature`)
-5. Pull Request oluşturun
 
 ## 📝 Lisans
 
@@ -210,15 +206,3 @@ Bu proje MIT lisansı altında lisanslanmıştır.
 - GitHub: [@ilhanuzunoglu](https://github.com/ilhanuzunoglu)
 - Repository: [FullStackDevelopmentCaseStudyProductListforRings](https://github.com/ilhanuzunoglu/FullStackDevelopmentCaseStudyProductListforRings)
 
-## 🎯 Gelecek Özellikler
-
-- [ ] Kullanıcı yorumları
-- [ ] Favori ürünler
-- [ ] Gelişmiş filtreleme
-- [ ] Ürün karşılaştırma
-- [ ] Sepet sistemi
-- [ ] Ödeme entegrasyonu
-
----
-
-⭐ **Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!**
